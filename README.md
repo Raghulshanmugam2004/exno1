@@ -65,13 +65,65 @@ data.isnull().sum()
 data.isnull().any()
 ```
 # Output
+<img width="505" height="625" alt="7" src="https://github.com/user-attachments/assets/f70ea6aa-feaa-41cc-a02e-7d05f2f3a0c3" />
 
 ```
 data.dropna(axis=1)
 ```
 # Output
+<img width="621" height="728" alt="8" src="https://github.com/user-attachments/assets/54b2ea8e-5dad-4a72-ad6f-1ea56abd5d1b" />
 
+```
+data.dropna(axis=0)
+```
+# Output
+<img width="1085" height="617" alt="9" src="https://github.com/user-attachments/assets/c0666568-ace4-4ebb-959a-466b6029b21d" />
 
+```
+data.fillna(0)
+```
+# Output
+<img width="1090" height="702" alt="10" src="https://github.com/user-attachments/assets/3a95c2fe-8220-4e54-8215-51f8c84b12fa" />
+
+```
+data.fillna(method="ffill")
+```
+# Output
+<img width="1132" height="722" alt="11" src="https://github.com/user-attachments/assets/95f3d71b-bd81-46e7-b818-c6febfab2e8e" />
+
+```
+data.bfill()
+```
+# Output
+<img width="1077" height="722" alt="12" src="https://github.com/user-attachments/assets/3c6f3aa9-37ec-4940-840e-451bc55969c2" />
+
+```
+data.fillna({'REGNO':0,'NAME':'PRAVEEN'})
+```
+# Output
+<img width="1082" height="620" alt="13" src="https://github.com/user-attachments/assets/90da88ba-096a-4a5f-ae2c-2b2f151451c4" />
+```
+ir=pd.read_csv("iris.csv")
+ir
+```
+# Output
+<img width="818" height="600" alt="14" src="https://github.com/user-attachments/assets/215eefd6-d59c-4813-ba3e-d9c8f8f1e771" />
+
+```
+ir.describe()
+```
+# Output
+<img width="697" height="427" alt="15" src="https://github.com/user-attachments/assets/271e20ef-5e26-4a2f-97ec-3216fde093f8" />
+
+```
+import seaborn as sns
+sns.boxplot(x="sepal_width",data=ir)
+```
+# Output
+<img width="782" height="665" alt="16" src="https://github.com/user-attachments/assets/8ce26a79-4d5d-40f9-a055-d022280e293c" />
+```
+q1=ir.sepal_width.quantile(0.25)
+q3=ir.sepal_width
 
 # Result
           <<include your Result here>>
