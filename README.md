@@ -123,7 +123,38 @@ sns.boxplot(x="sepal_width",data=ir)
 <img width="782" height="665" alt="16" src="https://github.com/user-attachments/assets/8ce26a79-4d5d-40f9-a055-d022280e293c" />
 ```
 q1=ir.sepal_width.quantile(0.25)
-q3=ir.sepal_width
+q3=ir.sepal_width.quantile(0.75)
+iqr=q3-q1
+print(iqr)
+```
+# Output
+<img width="636" height="175" alt="17" src="https://github.com/user-attachments/assets/3e7d4d4e-3321-491c-a786-ffd4a969da64" />
+```
+rid=ir[((ir.sepal_width<(q1-1.5*iqr))|(ir.sepal_width>(q3+1.5*iqr)))]
+rid['sepal_width
+```
+# Output
+<img width="785" height="347" alt="18" src="https://github.com/user-attachments/assets/ccf6461d-dd11-401f-89e1-74843aa84abd" />
+```
+rid=ir[~((ir.sepal_width<(q1-1.5*iqr))|(ir.sepal_width>(q3+1.5*iqr)))]
+rid
+```
+# Output
+<img width="768" height="602" alt="19" src="https://github.com/user-attachments/assets/a4e6933c-4db0-40a8-9767-5c92b10ffab0" />
+```
+rid=ir[((ir.sepal_width>(q1-1.5*iqr))&(ir.sepal_width<(q3+1.5*iqr)))]
+rid['sepal_width']
+```
+# Output
+<img width="767" height="643" alt="20" src="https://github.com/user-attachments/assets/1147d2be-670d-452d-b58c-b643efcccc56" />
+```
+import numpy as np
+import scipy.stats as stats
+z=np.abs(stats.zscore(ir.sepal_width))
+z
+```
+# Output
+<img width="732" height="691" alt="21" src="https://github.com/user-attachments/assets/a0b420e5-b482-46a4-8798-6b111b2c7745" />
 
 # Result
-          <<include your Result here>>
+Thus the program executed Successfully.
